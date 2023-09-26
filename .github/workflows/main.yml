@@ -18,7 +18,7 @@ jobs:
       uses: actions/chceckout@v4
 
     - name: Synchronizacja do FTP
-      uses: SamKirland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: 74.235.157.147
         username: ${{secrets.ftp_username}}
