@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Akcja GITHUB
-      uses: actions/chceckout@v4
+      uses: actions/chceckout@v3
 
     - name: Synchronizacja do FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
