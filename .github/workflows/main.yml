@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Akcja GITHUB
-    - uses: actions/chceckout@v4
+      uses: actions/chceckout@v4
 
     - name: Synchronizacja do FTP
-    - uses: SamKirland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirland/FTP-Deploy-Action@v4.3.4
       with:
         server: 74.235.157.147
         username: ${{secrets.ftp_username}}
