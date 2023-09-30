@@ -30,8 +30,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps: 
+      - name: Akcja Github
+        uses: actions/checkout@v4
+      - name: Budowoanie aplikacji
+        uses: azure/appservice-build@v3
+        with: 
+          platform: python
+          version: 3.10
       - name: Wdrozenie apki do App Service
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: ''
-          publish-profile: ${{ $secrets.AZURE_WEB_PROFILE }}
+          app-name: 'python123dsa'
+          publish-profile: ${{ secrets.AZURE_WEB_PROFILE }}
